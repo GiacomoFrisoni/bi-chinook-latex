@@ -1,0 +1,12 @@
+*.aux
+*.bbl
+*.blg
+*.lof
+*.log
+*.lol
+*.lot
+*.out
+*.gz
+*.toc
+Corpo della relazione/*.pdf
+Frontespizio/*.pdf
