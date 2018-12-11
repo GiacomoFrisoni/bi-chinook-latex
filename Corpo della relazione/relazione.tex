@@ -159,54 +159,46 @@
 	\listoftables                           %crea l'elenco delle tabelle
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
 	\clearpage{\pagestyle{empty}\cleardoublepage}
-	\lstlistoflistings						%crea l'elenco dei codici
+	\lstlistoflistings						%crea l'elenco dei codici+
+	\pagenumbering{arabic}                  %mette i numeri arabi+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
 	\clearpage{\pagestyle{empty}\cleardoublepage}
-	\chapter*{Introduzione}                 %crea l'introduzione (un capitolo
-	%   non numerato)
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%imposta l'intestazione di pagina
-	\rhead[\fancyplain{}{\bfseries
-		INTRODUZIONE}]{\fancyplain{}{\bfseries\thepage}}
-	\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries
-			INTRODUZIONE}}
-	\pagenumbering{arabic}                  %mette i numeri arabi
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%aggiunge la voce Introduzione
-	%   nell'indice
-	\addcontentsline{toc}{chapter}{Introduzione}
-	Elenco di prova.\\
-	Test:
-	\begin{itemize}
-		\item test1
-		\item test2 (\textbf{bold})
-	\end{itemize}
-	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
-	\clearpage{\pagestyle{empty}\cleardoublepage}
-	\chapter{Architettura}           %crea il capitolo
+	\chapter{Testo del progetto}           %crea il capitolo
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%imposta l'intestazione di pagina
 	\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
-	In questo capitolo è proposta l'architettura di riferimento su cui sono state costruite le soluzioni
-	per entrambi gli esercizi. Come si avrà modo di osservare con maggior dettaglio nei successivi capitoli,
-	entrambi i problemi specificano a livello di requisiti l'impiego di Akka come framework di
-	riferimento per lo sviluppo ad attori.\\
-	
-	\section{Architettura event-driven e reattiva}
-	Test section 1
-	\begin{comment}
+	\section{Specifiche}
+	Dato il database relazionale Chinook e il relativo schema concettuale riportato
+	in Figura \ref{fig:chinook_er}, si vogliono portare a termine i seguenti obiettivi.
+	\begin{itemize}
+		\item Progettazione concettuale di Schema di Fatto da schema E/R e relazionali.
+		\item Analisi del carico di lavoro.
+		\item Realizzazione di un cubo su Analysis Service.
+		\item Preparazione di un report.
+	\end{itemize}
+	\section{Carico di lavoro}
+	Il carico di lavoro complessivo è costituito da 4 query. Nelle seguenti sezioni si
+	riportano sia quelle di natura obbligatoria per il gruppo in esame sia quelle aggiuntive
+	relativamente il medesimo fatto di interesse.
+	\subsection{Query di base}
+	\begin{enumerate}
+		\item Durata media delle tracce per artista.
+		\item Numero di tracce per genere.
+	\end{enumerate}
+	\subsection{Query aggiuntive}
+	\begin{enumerate}
+		\item Dimensione media in byte delle tracce per genere.
+		\item Durata media delle tracce per media type.
+	\end{enumerate}
 	\begin{figure}[!htb]
 	\centering
-	\includegraphics[scale=0.35]{eps/akka_system_working.pdf}
-	\caption{Schema di funzionamento di un sistema Akka}
-	\label{fig:akka_system_working}
+	\includegraphics[scale=0.35]{eps/chinook_er.eps}
+	\caption{Schema concettuale di Chinook}
+	\label{fig:chinook_er}
 	\end{figure}
-	\end{comment}
 	
-	\section{Architettura di un attore in Akka}
-	Test section 2
-	\vspace{0,5cm}
-	Cite test\cite{AkkaSiteWeb}.\\
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
 	\clearpage{\pagestyle{empty}\cleardoublepage}
-	\chapter{Game of Life}           %crea il capitolo
+	\chapter{DFM}           %crea il capitolo
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%imposta l'intestazione di pagina
 	\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
 	New chapter test.
@@ -281,15 +273,26 @@
 	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
 	\clearpage{\pagestyle{empty}\cleardoublepage}
-	\chapter{Final Chapter}                %crea il capitolo
+	\chapter{Schemi delle query su DFM}                %crea il capitolo
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%imposta l'intestazione di pagina
 	\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
+	New chapter test.
 	
-	\section{Conclusion}
-	...
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+	\chapter{Schema logico}           %crea il capitolo
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%imposta l'intestazione di pagina
+	\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
+	New chapter test.
 	
-	\subsection{Osservazioni su soluzioni alternative}
-	...
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%non numera l'ultima pagina sinistra
+	\clearpage{\pagestyle{empty}\cleardoublepage}
+	\chapter{Report}           %crea il capitolo
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%imposta l'intestazione di pagina
+	\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
+	New chapter test.
+	
+	
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%imposta l'intestazione di pagina
 	\renewcommand{\chaptermark}[1]{\markright{\thechapter \ #1}{}}
 	\lhead[\fancyplain{}{\bfseries\thepage}]{\fancyplain{}{\bfseries\rightmark}}
